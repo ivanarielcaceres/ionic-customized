@@ -11,10 +11,16 @@
 
         <div class="container" style="margin-top: 30px; padding: 35px;">
             <div class="contained">
-              <ion-item style="background-color: #7ff4e7; color: white;">                    
+              <!-- <ion-item style="background-color: #7ff4e7; color: white;">                    
                 <ion-label stacked>{{ 'EMAIL' | translate }}</ion-label>
                 <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
-              </ion-item>
+              </ion-item> -->
+              <div id = "container" class="list list-inset">
+                <label id = "rounded" class="item item-input">
+                  <img src="https://dl.dropboxusercontent.com/s/n2s5u9eifp3y2rz/search_icon.png?dl=0">
+                  <input type="text" placeholder="Email" style="border-radius: 5px; border: none; padding: 5px; width: 100%">
+                </label>
+              </div>
 
               <!--
               Want to use a Username instead of an Email? Here you go:
@@ -25,11 +31,14 @@
               </ion-item>
               -->
 
-              <ion-item style="background-color: #7ff4e7; color: white;">
-                <ion-label stacked>{{ 'PASSWORD' | translate }}</ion-label>
-                <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
-              </ion-item>
-              <ion-item style="background-color: #7ff4e7; color: white;">
+              <div id = "container" class="list list-inset">
+                <label id = "rounded" class="item item-input">
+                  <img src="https://dl.dropboxusercontent.com/s/n2s5u9eifp3y2rz/search_icon.png?dl=0">
+                  <input type="text" placeholder="Password" style="border-radius: 5px; border: none; padding: 5px; width: 100%">
+                </label>
+              </div>
+
+              <ion-item style="background-color: #7ff4e7; color: white;"  no-lines>
                 <ion-label>Remember login</ion-label>
                 <ion-checkbox checked="true"></ion-checkbox>
               </ion-item>
