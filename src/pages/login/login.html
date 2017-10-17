@@ -18,7 +18,8 @@
               <div id = "container" class="list list-inset">
                 <label id = "rounded" class="item item-input">
                   <img src="https://dl.dropboxusercontent.com/s/n2s5u9eifp3y2rz/search_icon.png?dl=0">
-                  <input type="text" placeholder="Email" style="border-radius: 5px; border: none; padding: 5px; width: 100%">
+                  <input type="email" placeholder="Email" style="border-radius: 5px; border: none; padding: 5px; width: 100%"
+                        [(ngModel)]="account.email" name="email">
                 </label>
               </div>
 
@@ -34,7 +35,8 @@
               <div id = "container" class="list list-inset">
                 <label id = "rounded" class="item item-input">
                   <img src="https://dl.dropboxusercontent.com/s/n2s5u9eifp3y2rz/search_icon.png?dl=0">
-                  <input type="text" placeholder="Password" style="border-radius: 5px; border: none; padding: 5px; width: 100%">
+                  <input type="password" placeholder="Password" style="border-radius: 5px; border: none; padding: 5px; width: 100%"
+                        [(ngModel)]="account.password" name="password">
                 </label>
               </div>
 
