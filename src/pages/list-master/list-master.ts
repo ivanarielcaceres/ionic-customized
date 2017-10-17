@@ -10,10 +10,9 @@ import { Items } from '../../providers/providers';
   templateUrl: 'list-master.html'
 })
 export class ListMasterPage {
-  currentItems: Item[];
-
+  currentItems = []
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+    this.currentItems = [{faq_category: "FAQ1", show: false}, {faq_category: "FAQ2", show: false}];
   }
 
   /**
@@ -51,4 +50,12 @@ export class ListMasterPage {
       item: item
     });
   }
+
+  isGroupShown(item) {
+    return item.show;
+  };
+
+  toggleGroup(item) {
+    item.show = !item.show;
+  };
 }
