@@ -8,25 +8,34 @@
         </div>
     </div>
   </div>
-  <div>
-    <ion-list *ngFor="let item of currentItems">
-        <div class="item-stable"
+  <h3 style="font-family: Roboto; color: #525252; font-size: large; text-align:center;">FAQs</h3>
+  <div style="margin-top: 25px;">
+    <ion-list *ngFor="let item of currentItems" 
+              style="margin-bottom: 10px;"
+              no-lines
+              inset>
+        <ion-item class="item-stable"
         (click)="toggleGroup(item)"
         [ngClass]="{active: isGroupShown(item)}"
-        padding>
-          <h6>{{item.faq_category}}</h6>
-        </div>
+        padding
+        style="background-color: #a3f1e8;">
+          <h6 style="font-family: Roboto; color: #525252; font-size: large; margin-left: 10px;">
+            {{item.faq_category}}
+          </h6>
+          <ion-icon name="arrow-forward"></ion-icon>          
+        </ion-item>
         <div class="item-accordion"
-            [hidden]="!isGroupShown(item)" padding>
-          <h6>How do I change my password?</h6>
-          <p>
+            [hidden]="!isGroupShown(item)" padding
+            style="background-color: #a3f1e8">
+          <h6 style="font-family: Roboto; color: #525252; font-size: large; margin-left: 10px;">How do I change my password?</h6>
+          <p style="font-family: Roboto; color: #525252; margin-left: 10px;">
             If you need to change your password contact 
             hello@reach-reviews.com and ask for an update 
             password. You can also visit the feedback tab and
             ask for your updated password here
           </p>
-          <h6>I need my log in information</h6>
-            <p>
+          <h6 style="font-family: Roboto; color: #525252; font-size: large; margin-left: 10px;">I need my log in information</h6>
+            <p style="font-family: Roboto; color: #525252; margin-left: 10px;">
               Login info is sent to the email linked to
               the account during the account creation. If
               the information has been lost or forgotten pelase 
