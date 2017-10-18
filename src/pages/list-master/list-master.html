@@ -12,17 +12,22 @@
   <div style="margin-top: 25px;">
     <ion-list *ngFor="let item of currentItems" 
               style="margin-bottom: 10px;"
-              no-lines
-              inset>
-        <ion-item class="item-stable"
+              no-lines>
+        <ion-item
         (click)="toggleGroup(item)"
         [ngClass]="{active: isGroupShown(item)}"
-        padding
         style="background-color: #a3f1e8;">
-          <h6 style="font-family: Roboto; color: #525252; font-size: large; margin-left: 10px;">
-            {{item.faq_category}}
-          </h6>
-          <ion-icon name="arrow-forward"></ion-icon>          
+          <ion-row>
+            <ion-col col-10>
+              <h6 style="font-family: Roboto; color: #525252; font-size: large; margin-left: 10px;">
+                {{item.faq_category}}
+              </h6>
+            </ion-col>
+            <ion-col col-2>
+              <ion-icon [hidden]="isGroupShown(item)" name="ios-arrow-forward" style="color: #525252"></ion-icon> 
+              <ion-icon [hidden]="!isGroupShown(item)" name="ios-arrow-down" style="color: #525252"></ion-icon>              
+            </ion-col>
+          </ion-row>
         </ion-item>
         <div class="item-accordion"
             [hidden]="!isGroupShown(item)" padding
