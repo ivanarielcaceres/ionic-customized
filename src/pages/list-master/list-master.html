@@ -1,29 +1,39 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
-
-    <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-
-</ion-header>
-
-<ion-content>
-
-  <ion-list *ngFor="let item of currentItems">
-      <ion-item class="item-stable"
-      (click)="toggleGroup(item)"
-      [ngClass]="{active: isGroupShown(item)}">
-        <h2>{{item.faq_category}}</h2>
-      </ion-item>
-      <ion-item class="item-accordion"
-               [hidden]="!isGroupShown(item)">
-        <p>hola</p>
-        <p>fdsaf</p>
-      </ion-item>
-  </ion-list>
+<ion-content style="background-color: #7ff4e7">
+  <div>
+    <div class="container" style="padding: 25px;">
+        <div class="contained">
+          <ion-thumbnail style="text-align: center;">
+            <img src="http://www.iconsdb.com/icons/preview/white/youtube-4-xxl.png" style="display: inline;">
+          </ion-thumbnail>
+        </div>
+    </div>
+  </div>
+  <div>
+    <ion-list *ngFor="let item of currentItems">
+        <div class="item-stable"
+        (click)="toggleGroup(item)"
+        [ngClass]="{active: isGroupShown(item)}"
+        padding>
+          <h6>{{item.faq_category}}</h6>
+        </div>
+        <div class="item-accordion"
+            [hidden]="!isGroupShown(item)" padding>
+          <h6>How do I change my password?</h6>
+          <p>
+            If you need to change your password contact 
+            hello@reach-reviews.com and ask for an update 
+            password. You can also visit the feedback tab and
+            ask for your updated password here
+          </p>
+          <h6>I need my log in information</h6>
+            <p>
+              Login info is sent to the email linked to
+              the account during the account creation. If
+              the information has been lost or forgotten pelase 
+              contact hello@reach-reviews.com to receive a new 
+              login credentials.
+            </p>
+          </div>
+    </ion-list>
+  </div>
 </ion-content>

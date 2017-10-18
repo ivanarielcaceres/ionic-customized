@@ -12,7 +12,9 @@ import { Items } from '../../providers/providers';
 export class ListMasterPage {
   currentItems = []
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = [{faq_category: "FAQ1", show: false}, {faq_category: "FAQ2", show: false}];
+    this.currentItems = [{faq_category: "Questions", show: false}, 
+                         {faq_category: "Social Media Coaching", show: false},
+                         {faq_category: "Review Process", show: false}];
   }
 
   /**
